@@ -41,7 +41,7 @@ class App extends React.Component {
       ? this.state.cities.filter(city => {
           const cityLC = city.city.toLowerCase();
           const inputValueLC = this.state.inputValue.toLowerCase();
-          return cityLC.indexOf(inputValueLC) !== -1;
+          return cityLC.includes(inputValueLC);
         })
       : [];
     return matchedCities;
